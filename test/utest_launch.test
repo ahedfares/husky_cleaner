@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Start the husky node -->
+    <include file="$(find husky)/launch/run.launch"/>
+
+    <!-- launch tests -->
+    <test test-name="unit_test_node" pkg="husky" type="utest_node"/>
+</launch>
