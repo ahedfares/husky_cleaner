@@ -19,8 +19,7 @@ roslaunch husky run.launch
 ```
 
 ## Notes
-1. The submitted package provides many approximations to calculate the required parameters as it is based on using occupancy grid to calculate the total covered area.
-2. The parameters are hard coded for the purpose of this task, but all the declared static global variables (e.g. map resolution, grid width, grid height, ...etc) can be turned into parameters for reusability if needed.
+1. This package provides many approximations to calculate the required parameters as it is based on using occupancy grid to calculate the total covered area.
 3. Calculating the curvature from discrete points is done via using an online package (submitted with the files in the depends folder), the math behind it relies on least square approximation and a chosen value of 5 look ahead and behind points is chosen and found to be accurate enough for the purpose of the task.
 4. To calculate the total path, the distance between two data points along the path is checked and the linear distance between them is added to the total distance.
 5. To calculate the total cleaned area, an occupancy grid map is designed and the cells are marked as visited for each pose in the given path with consideration of orientation at each pose, then an interpolation is done between each two poses to cover the cells while the robot is moving between pose[i] to pose[i+1].
